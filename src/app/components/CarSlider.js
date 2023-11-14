@@ -23,39 +23,39 @@ import { fadeIn } from "/variants";
 //car data
 const cars = [
   {
-    type: "Хэтчбек",
-    name: "Ford Focus",
-    price: 29000000000,
+    type: "Elektromobil",
+    name: "BYD Seagull",
+    price: "221 238 900",
     stars: 3.5,
     image: "/images/carSlider/car1.png",
     logo: "icons/brands/mercedes.svg",
     info: [
       {
         icon: "icons/carSlider/engine.svg",
-        text: "1600 ЛС",
+        text: "38,8 kVt",
       },
       {
         icon: "icons/carSlider/gas.svg",
-        text: "Газ",
+        text: "Elektr",
       },
       {
         icon: "icons/carSlider/gearshift.svg",
-        text: "Механика",
+        text: "Avtomat",
       },
       {
         icon: "icons/carSlider/wheel.svg",
-        text: "Передний",
+        text: "Old",
       },
       {
         icon: "icons/carSlider/seat.svg",
-        text: "5 мест",
+        text: "4 o'rindiq",
       },
     ],
   },
   {
     type: "Седан",
     name: "Toyota Corolla",
-    price: 25,
+    price: "25 000 000 000",
     stars: 5,
     image: "/images/carSlider/car1.png",
     logo: "icons/brands/bmw.svg",
@@ -85,7 +85,7 @@ const cars = [
   {
     type: "Кабриолет",
     name: "Honda CR-V",
-    price: 32,
+    price: "32 000 000 000",
     stars: 4.9,
     image: "/images/carSlider/car1.png",
     logo: "icons/brands/vw.svg",
@@ -115,7 +115,7 @@ const cars = [
   {
     type: "Внедорожник",
     name: "Honda CR-V",
-    price: 35,
+    price: "35 000 000 000",
     stars: 4.7,
     image: "/images/carSlider/car1.png",
     logo: "icons/brands/mercedes.svg",
@@ -182,7 +182,7 @@ export default function CarSlider() {
                   // }}
                   className="flex justify-center items-center"
                 >
-                  <Image src={car.logo} width={60} height={60} alt="mercedes" />
+                  <Image src={car.logo} width={60} height={60} alt="" />
                 </motion.div>
                 <motion.div
                   whileHover={{
@@ -204,7 +204,7 @@ export default function CarSlider() {
                     </div>
                     <h3 className="text-lg uppercase font-bold">{car.name}</h3>
                     <h3 className="mb-10 text-accent font-normal">
-                      {car.price} сум
+                      {car.price} so'm
                     </h3>
                   </div>
                   {/* stars */}

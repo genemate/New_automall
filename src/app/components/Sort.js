@@ -153,27 +153,19 @@ export default function Sort() {
       viewport={{ once: false, amount: 0.2 }}
       className="container mx-auto"
     >
-      <Swiper
-        breakpoints={{
-          320: { slidesPerView: 1, spaceBetween: 15 },
-          640: { slidesPerView: 2, spaceBetween: 32 },
-          1260: { slidesPerView: 3, spaceBetween: 32 },
-        }}
-      >
-        {cars.map((car, index) => {
-          return (
-            <SwiperSlide key={index}>
-              <div className="max-w-[385px] mx-auto sm:mx-0">
-                <div className="flex justify-between ml-5">
-                  <div className="text-[13px] text-secondary uppercase mb-5">
-                    {car.type}
-                  </div>
-                </div>
+      {cars.map((car, index) => {
+        return (
+          <div className="inline-block max-w-[385px] mx-auto sm:mx-0 mb-10">
+            <div className="flex justify-between">
+              <div className="inline-block mb-2 ml-2 rounded-full border-solid 
+              border-2 hover:scale-105 transition-all ease duration-200  py-2 
+              px-10 font-semibold uppercase xl:justify-start cursor-pointer">
+                {car.type}
               </div>
-            </SwiperSlide>
-          );
-        })}
-      </Swiper>
+            </div>
+          </div>
+        );
+      })}
     </motion.div>
   );
 }
