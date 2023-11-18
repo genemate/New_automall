@@ -18,9 +18,12 @@ import { fadeIn } from "/variants";
 //link / react scroll
 import { Link } from "react-scroll";
 
+//icons
+import { FaInstagram, FaTelegramPlane, FaFacebook } from "react-icons/fa";
+
 export default function Footer() {
   return (
-    <footer className="pt-20 bg-white z-20" id="testimonial">
+    <footer className="pt-20 bg-[#b2b7c2]/10" id="testimonial">
       <div className="container mx-auto mb-24">
         {/* grid */}
         <motion.div
@@ -41,7 +44,17 @@ export default function Footer() {
               <Image src={"/icons/logo.png"} width={150} height={100} alt="" />
             </Link>
             {/* text */}
-            <div className="text-secondary">Lorem</div>
+            <div className="flex h-full items-center">
+              <a href="/">
+                <FaTelegramPlane />
+              </a>
+              <a href="/">
+                <FaInstagram />
+              </a>
+              <a href="/">
+                <FaFacebook />
+              </a>
+            </div>
             {/* phone & mail */}
             <div className="flex flex-col gap-y-4 font-semibold">
               {/* phone */}
@@ -102,21 +115,6 @@ export default function Footer() {
             </div>
           </div>
           {/* newsletter */}
-          <div className="flex-1">
-            <h3 className="h3 font-bold mb-8">Newsletter</h3>
-            <div className="mb-9 text-secondary">lorem ipsum</div>
-            {/* form */}
-            <form className="flex gap-x-2 h-14">
-              <input
-                type="text"
-                placeholder="Your email"
-                className="outline-none bg-white h-full border rounded-lg pl-4 focus:border-accent"
-              />
-              <button type="submit" className="btn btn-sm btn-accent w-24">
-                Submit
-              </button>
-            </form>
-          </div>
         </motion.div>
       </div>
       <Copyright />

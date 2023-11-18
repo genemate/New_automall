@@ -5,6 +5,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 //import swiper styles
 import "swiper/css";
+import "swiper/css/navigation";
+
+import { Navigation } from "swiper/modules";
 
 //next images
 import Image from "next/image";
@@ -12,6 +15,7 @@ import Image from "next/image";
 //icons
 import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
 import { AiFillCaretRight } from "react-icons/ai";
+import { FaArrowRight, FaArrowLeft } from "react-icons/fa6";
 
 //framer
 import { motion } from "framer-motion";
@@ -56,9 +60,6 @@ export default function TestimonialSlider() {
   return (
     <section className="container">
       <div className="container mx-auto">
-      <div>
-        {/* <Text src={testimonial.type}/> */}
-      </div>
         <h2
           variants={fadeIn("up", 0.2)}
           initial="hidden"
@@ -68,6 +69,17 @@ export default function TestimonialSlider() {
         >
           News
         </h2>
+        <div className="flex items-center gap-x-[10px] justify-end">
+          <h3 className="flex flex-col gap-y-4 font-semibold">
+            <ul>
+              <li>
+                <a href="#">See all</a>
+              </li>
+            </ul>
+          </h3>
+          <AiFillCaretRight />
+        </div>
+        
       </div>
       <motion.div
         variants={fadeIn("up", 0.4)}
@@ -77,8 +89,10 @@ export default function TestimonialSlider() {
         className="container mx-auto"
       >
         <Swiper
-          // modules={[Navigation, Pagination, Apply]}
-          slidesPerView="auto"
+          spaceBetween={30}
+          navigation={true}
+          modules={[Navigation]}
+          className="mySwiper"
           breakpoints={{
             320: { slidesPerView: 1, spaceBetween: 15 },
             640: { slidesPerView: 2, spaceBetween: 32 },
@@ -128,42 +142,24 @@ export default function TestimonialSlider() {
                               </li>
                             </ul>
                           </h3>
-                          <AiFillCaretRight />
+                          <AiFillCaretRight className="cursor-pointer" href="/" />
                         </div>
                       </div>
                     </div>
-                    {/* stars */}
-                    {/* <div className="flex gap-x-2 text-accent h-max">
-                    <FaStar />
-                    <FaStar />
-                    <FaStar />
-                    <FaStar />
-                    <FaStar />
-                  </div> */}
                   </div>
-                  {/* testimonial info */}
-                  {/* <div className="flex gap-x-3 xl:gap-x-4 w-max mb-10">
-                  {testimonial.info.map((item, index) => {
-                    return (
-                      <div key={index} className="flex flex-col items-center">
-                        <div className="bg-primary w-12 h-12 rounded-full flex justify-center items-center mb-2">
-                          <Image
-                            src={item.icon}
-                            width={24}
-                            height={24}
-                            alt=""
-                          />
-                        </div>
-                        <div className="text-[12px] uppercase">{item.text}</div>
-                      </div>
-                    );
-                  })}
-                </div> */}
-                  {/* <button className="btn btn-accent btn-lg">Подробнее</button> */}
                 </div>
               </SwiperSlide>
             );
           })}
+          {/* <div className="slider-controller">
+            <div className="swiper-button-prev slider-arrow">
+              <FaArrowLeft />
+            </div>
+            <div className="swiper-button-next slider-arrow">
+              <FaArrowRight />
+            </div>
+            <div className="swiper-pagination"></div>
+          </div> */}
         </Swiper>
       </motion.div>
     </section>

@@ -15,9 +15,16 @@ import { useMediaQuery } from "react-responsive";
 
 //icons
 import { BiMenuAltRight, BiX } from "react-icons/bi";
+import { FaInstagram, FaTelegramPlane, FaFacebook } from "react-icons/fa";
 
 //search context
 import { SearchContext } from "../context/search";
+
+//Swiper
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Autoplay, Pagination } from "swiper/modules";
 
 export default function Header() {
   const { setSearchActive } = useContext(SearchContext);
@@ -70,7 +77,12 @@ export default function Header() {
             spy={true}
             className="cursor-pointer"
           >
-            <Image src={"/icons/logo-hor.png"} width={223} height={254} alt="" />
+            <Image
+              src={"/icons/logo-hor.png"}
+              width={223}
+              height={254}
+              alt=""
+            />
           </Link>
           {/* nav open menu */}
           <div
@@ -85,22 +97,22 @@ export default function Header() {
           className={`${
             nav ? "max-h-max py-8 px-4 xl:py-0 xl:px-0" : "max-h-0 xl:max-h-max"
           } flex flex-col w-full bg-white gap-y-6 overflow-hidden font-bold 
-          xl:font-medium xl:flex-row xl:w-max xl:gap-x-8 xl:h-max xl:bg-transparent 
+          xl:font-medium xl:flex-row xl:w-max xl:gap-x-4 xl:h-max xl:bg-transparent 
           xl:pb-0 transition-all duration-150 text-center xl:text-center uppercase 
           text-sm xl:text-[15px] xl:normal-case`}
         >
-        
           <Link
-            className="cursor-pointer uppercase text-[13px] font-semibold text-primary hover:text-accent"
+            className="cursor-pointer uppercase text-[13px] font-semibold text-primary hover:text-accent inline-block mb-2 rounded-full border-solid border-2 py-2 px-10"
             to="#"
             activeClass="active"
             smooth={desktopMode}
             spy={true}
+            href="/"
           >
             Avtomobillar
           </Link>
           <Link
-            className="cursor-pointer uppercase text-[13px] font-semibold text-primary hover:text-accent"
+            className="cursor-pointer uppercase text-[13px] font-semibold text-primary hover:text-accent inline-block mb-2 rounded-full border-solid border-2 py-2 px-10"
             to="#"
             activeClass="active"
             smooth={desktopMode}
@@ -109,20 +121,22 @@ export default function Header() {
             Maxsus takliflar
           </Link>
           <Link
-            className="cursor-pointer uppercase text-[13px] font-semibold text-primary hover:text-accent"
+            className="cursor-pointer uppercase text-[13px] font-semibold text-primary hover:text-accent inline-block mb-2 rounded-full border-solid border-2 py-2 px-10"
             to="#"
             activeClass="active"
             smooth={desktopMode}
             spy={true}
+            href="/"
           >
             Muddatli to'lov
           </Link>
           <Link
-            className="cursor-pointer uppercase text-[13px] font-semibold text-primary hover:text-accent"
+            className="cursor-pointer uppercase text-[13px] font-semibold text-primary hover:text-accent inline-block mb-2 rounded-full border-solid border-2 py-2 px-10"
             to="#"
             activeClass="active"
             smooth={desktopMode}
             spy={true}
+            href="/"
           >
             Biz haqimizda
           </Link>
@@ -146,6 +160,17 @@ export default function Header() {
           </Link>
           <SearchMobile /> */}
         </nav>
+        <div className="flex h-full justify-between border-dark items-center mb-2 rounded-full border-solid border-2">
+          <a href="/">
+            <FaTelegramPlane />
+          </a>
+          <a href="/">
+            <FaInstagram />
+          </a>
+          <a href="/">
+            <FaFacebook />
+          </a>
+        </div>
       </div>
     </header>
   );

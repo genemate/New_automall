@@ -35,7 +35,7 @@ export default function DateSelection() {
           <input
             type="text"
             placeholder="F.I.SH."
-            className="outline-none bg-white h-full border rounded-lg pl-4 focus:border-accent"
+            className="outline-none bg-white h-full border rounded-lg pl-4 focus:border-accent rounded-full"
           />
         </form>
         </Menu.Button>
