@@ -29,8 +29,8 @@ export default function Search() {
           <button
             className={`${
               searchActive
-                ? "btn btn-sm btn-accent xl:w-[164px] rounded-[10px]"
-                : "btn btn-lg btn-accent xl:w-[184px] rounded-[10px]"
+                ? "btn btn-sm btn-cta xl:w-[164px] rounded-[10px]"
+                : "btn btn-lg btn-cta xl:w-[184px] rounded-[10px]"
             }`}
           >
             Ariza qoldirish

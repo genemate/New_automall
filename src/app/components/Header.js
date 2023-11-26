@@ -97,9 +97,9 @@ export default function Header() {
           className={`${
             nav ? "max-h-max py-8 px-4 xl:py-0 xl:px-0" : "max-h-0 xl:max-h-max"
           } flex flex-col w-full bg-white gap-y-6 overflow-hidden font-bold 
-          xl:font-medium xl:flex-row xl:w-max xl:gap-x-4 xl:h-max xl:bg-transparent 
+          xl:font-medium xl:flex-row xl:w-max xl:gap-x-2 xl:h-max xl:bg-transparent 
           xl:pb-0 transition-all duration-150 text-center xl:text-center uppercase 
-          text-sm xl:text-[15px] xl:normal-case`}
+          text-sm xl:text-[15px] xl:normal-case xl:items-center`}
         >
           <Link
             className="cursor-pointer uppercase text-[13px] font-semibold text-primary hover:text-accent inline-block mb-2 rounded-full border-solid border-2 py-2 px-10"
@@ -159,18 +159,18 @@ export default function Header() {
             See all cars
           </Link>
           <SearchMobile /> */}
+          {/* <div className="flex h-full justify-between border-dark items-center mb-2 rounded-full border-solid border-2">
+            <a href="/">
+              <FaTelegramPlane />
+            </a>
+            <a href="/">
+              <FaInstagram />
+            </a>
+            <a href="/">
+              <FaFacebook />
+            </a>
+          </div> */}
         </nav>
-        <div className="flex h-full justify-between border-dark items-center mb-2 rounded-full border-solid border-2">
-          <a href="/">
-            <FaTelegramPlane />
-          </a>
-          <a href="/">
-            <FaInstagram />
-          </a>
-          <a href="/">
-            <FaFacebook />
-          </a>
-        </div>
       </div>
     </header>
   );

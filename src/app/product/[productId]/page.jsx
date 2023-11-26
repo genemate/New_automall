@@ -3,7 +3,7 @@ export async function generateStaticParams() {
 }
 
 function Post({ params }) {
-  return <div>Post {params.productId}</div>;
+  return <div>Product detail {params.productId}</div>;
 }
 
 export default Post;

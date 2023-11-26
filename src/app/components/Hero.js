@@ -17,7 +17,6 @@ import { motion, easeInOut } from "framer-motion";
 //variants
 import { fadeIn } from "/variants";
 
-
 //Swiper
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -45,18 +44,18 @@ export default function Hero() {
   return (
     <section className="h-screen xl:h-[90vh] bg-[#b2b7c2]/10" id="home">
       <Swiper
-        direction={"vertical"}
+        direction={"horizontal"}
+        loop={true}
         spaceBetween={30}
         centeredSlides={true}
         autoplay={{
-          delay: 50000,
+          delay: 70000,
           disableOnInteraction: false,
         }}
         pagination={{
-          dynamicBullets: true,
+          el: "swiper-pagination",
         }}
         modules={[Autoplay, Pagination]}
-        // onAutoplayTimeLeft={onAutoplayTimeLeft}
         className="mySwiper"
       >
         <SwiperSlide>
@@ -67,7 +66,7 @@ export default function Hero() {
 
               <div className="text-center xl:max-w-xl xl:text-left mt-16 xl:mt-0">
                 <motion.h2
-                  variants={fadeIn("down", 0.2)}
+                  variants={fadeIn("down", 0.1)}
                   initial="hidden"
                   whileInView={"show"}
                   viewport={{ once: false, amount: 0.6 }}
@@ -77,7 +76,7 @@ export default function Hero() {
                   {/* <span className="text-accent">мировыми</span> предложениями */}
                 </motion.h2>
                 <motion.p
-                  variants={fadeIn("down", 0.4)}
+                  variants={fadeIn("down", 0.1)}
                   initial="hidden"
                   whileInView={"show"}
                   viewport={{ once: false, amount: 0.6 }}
@@ -87,19 +86,25 @@ export default function Hero() {
                   tayyor bo’lgan avtomobil!
                 </motion.p>
                 <motion.p
-                  variants={fadeIn("down", 0.4)}
+                  variants={fadeIn("down", 0.1)}
                   initial="hidden"
                   whileInView={"show"}
                   viewport={{ once: false, amount: 0.6 }}
-                  className="description max-w-[550px] mx-auto xl:mx-0 mb-6 xl:mb-10 ml-5 text-accent"
+                  className=" max-w-[550px] mx-auto xl:mx-0 mb-6 xl:mb-10"
                 >
-                  <div className="flex items-center justify-center cursor-pointer">
+                  <motion.div
+                    variants={fadeIn("down", 0.1)}
+                    initial="hidden"
+                    whileInView={"show"}
+                    viewport={{ once: false, amount: 0.6 }}
+                    className="flex items-center justify-center cursor-pointer"
+                  >
                     <div
-                      className="flip-card w-[400px] h-[60px] rounded-md items-center"
+                      className="flip-card w-[400px] h-[60px] rounded-md mx-auto xl:pr-20"
                       onClick={handleFlip}
                     >
                       <motion.div
-                        className="flip-card-inner w-[100%] h-[100%]"
+                        className="flip-card-inner w-[100%] h-[100%] font-semibold"
                         initial={false}
                         animate={{ rotateY: isFlipped ? 180 : 360 }}
                         transition={{
@@ -109,35 +114,41 @@ export default function Hero() {
                         onAnimationComplete={() => setIsAnimating(false)}
                       >
                         <div className="flip-card-front w-[100%] h-[100%] bg-cover border rounded-full text-primary p-4 text-center">
-                          <h1 className="text-2xl font-bold/"> 244 600 000 <sub>so'm</sub></h1>
+                          <h1 className="text-2xl font-bold/">
+                            {" "}
+                            244 600 000 <sub>so'm</sub>
+                          </h1>
                         </div>
 
                         <div className="flip-card-back  w-[100%] h-[100%] bg-cover border rounded-full text-primary p-4 text-center">
                           <h1 className="text-2xl font-bold/">
-                            <em>yoki oyiga </em>6 017 160 <sub>so'm</sub>
+                            <em>
+                              <sup>oyiga</sup>{" "}
+                            </em>
+                            6 017 160 <sub>so'm</sub>
                           </h1>
                         </div>
                       </motion.div>
                     </div>
-                  </div>
+                  </motion.div>
                 </motion.p>
                 {/* btn google */}
                 <motion.div
-                  variants={fadeIn("down", 0.6)}
+                  variants={fadeIn("down", 0.1)}
                   initial="hidden"
                   whileInView={"show"}
                   viewport={{ once: false, amount: 0.8 }}
                   className="flex gap-x-3 justify-center xl:justify-start"
                 >
                   <div>
-                    <button className="btn btn-cta btn-accent w-[164px] mx-auto">
-                      Ariza qoldirish
+                    <button className="btn btn-cta btn-primary w-[164px] mx-auto">
+                      <p className="text-yellow">Ariza qoldirish</p>
                     </button>
                   </div>
                   {/* btn app store */}
                   <div>
-                    <button className="btn btn-cta btn-secondary w-[164px] mx-auto">
-                      Batafsil
+                    <button className="btn btn-cta btn-yellow w-[164px] mx-auto">
+                      <p className="text-primary">Batafsil</p>
                     </button>
                   </div>
                 </motion.div>
@@ -145,7 +156,7 @@ export default function Hero() {
 
               {/* image car */}
               <motion.div
-                variants={fadeIn("left", 0.6)}
+                variants={fadeIn("left", 0.1)}
                 initial="hidden"
                 whileInView={"show"}
                 viewport={{ once: false, amount: 0.6 }}
@@ -153,7 +164,7 @@ export default function Hero() {
           xl:max-w-[860px] xl:max-[]:"
               >
                 <Image
-                  src={"/images/hero/car.svg"}
+                  src={"/images/hero/Honda.png"}
                   fill
                   alt=""
                   style={{ objectFit: "contain" }}
@@ -171,7 +182,7 @@ export default function Hero() {
 
               <div className="text-center xl:max-w-xl xl:text-left mt-16 xl:mt-0">
                 <motion.h2
-                  variants={fadeIn("down", 0.2)}
+                  variants={fadeIn("down", 0.1)}
                   initial="hidden"
                   whileInView={"show"}
                   viewport={{ once: false, amount: 0.6 }}
@@ -181,7 +192,7 @@ export default function Hero() {
                   {/* <span className="text-accent">мировыми</span> предложениями */}
                 </motion.h2>
                 <motion.p
-                  variants={fadeIn("down", 0.4)}
+                  variants={fadeIn("down", 0.1)}
                   initial="hidden"
                   whileInView={"show"}
                   viewport={{ once: false, amount: 0.6 }}
@@ -192,33 +203,63 @@ export default function Hero() {
                   crossover!
                 </motion.p>
                 <motion.p
-                  variants={fadeIn("down", 0.4)}
+                  variants={fadeIn("down", 0.1)}
                   initial="hidden"
                   whileInView={"show"}
                   viewport={{ once: false, amount: 0.6 }}
                   className="description max-w-[550px] mx-auto xl:mx-0 mb-6 xl:mb-10 ml-5 text-accent"
                 >
-                  <ins>
-                    <i>$20,000 yoki oyiga $492 evaziga</i>
-                  </ins>
+                  <div className="flex items-center justify-center cursor-pointer">
+                    <div
+                      className="flip-card w-[400px] h-[60px] rounded-md mx-auto xl:pr-20"
+                      onClick={handleFlip}
+                    >
+                      <motion.div
+                        className="flip-card-inner w-[100%] h-[100%] font-semibold"
+                        initial={false}
+                        animate={{ rotateY: isFlipped ? 180 : 360 }}
+                        transition={{
+                          duration: 0.6,
+                          animationDirection: "normal",
+                        }}
+                        onAnimationComplete={() => setIsAnimating(false)}
+                      >
+                        <div className="flip-card-front w-[100%] h-[100%] bg-cover border rounded-full text-primary p-4 text-center">
+                          <h1 className="text-2xl font-bold/">
+                            {" "}
+                            244 600 000 <sub>so'm</sub>
+                          </h1>
+                        </div>
+
+                        <div className="flip-card-back  w-[100%] h-[100%] bg-cover border rounded-full text-primary p-4 text-center">
+                          <h1 className="text-2xl font-bold/">
+                            <em>
+                              <sup>oyiga</sup>{" "}
+                            </em>
+                            6 017 160 <sub>so'm</sub>
+                          </h1>
+                        </div>
+                      </motion.div>
+                    </div>
+                  </div>
                 </motion.p>
                 {/* btn google */}
                 <motion.div
-                  variants={fadeIn("down", 0.6)}
+                  variants={fadeIn("down", 0.1)}
                   initial="hidden"
                   whileInView={"show"}
                   viewport={{ once: false, amount: 0.8 }}
                   className="flex gap-x-3 justify-center xl:justify-start"
                 >
                   <div>
-                    <button className="btn btn-cta btn-accent w-[164px] mx-auto">
-                      Ariza qoldirish
+                    <button className="btn btn-cta btn-primary w-[164px] mx-auto">
+                      <p className="text-yellow">Ariza qoldirish</p>
                     </button>
                   </div>
                   {/* btn app store */}
                   <div>
-                    <button className="btn btn-cta btn-secondary w-[164px] mx-auto">
-                      Batafsil
+                    <button className="btn btn-cta btn-yellow w-[164px] mx-auto">
+                      <p className="text-primary">Batafsil</p>
                     </button>
                   </div>
                 </motion.div>
@@ -226,7 +267,7 @@ export default function Hero() {
 
               {/* image car */}
               <motion.div
-                variants={fadeIn("left", 0.6)}
+                variants={fadeIn("left", 0.1)}
                 initial="hidden"
                 whileInView={"show"}
                 viewport={{ once: false, amount: 0.6 }}
@@ -234,7 +275,7 @@ export default function Hero() {
           xl:max-w-[860px] xl:max-[]:"
               >
                 <Image
-                  src={"/images/hero/car.svg"}
+                  src={"/images/hero/Honda.png"}
                   fill
                   alt=""
                   style={{ objectFit: "contain" }}
@@ -252,7 +293,7 @@ export default function Hero() {
 
               <div className="text-center xl:max-w-xl xl:text-left mt-16 xl:mt-0">
                 <motion.h2
-                  variants={fadeIn("down", 0.2)}
+                  variants={fadeIn("down", 0.1)}
                   initial="hidden"
                   whileInView={"show"}
                   viewport={{ once: false, amount: 0.6 }}
@@ -262,7 +303,7 @@ export default function Hero() {
                   {/* <span className="text-accent">мировыми</span> предложениями */}
                 </motion.h2>
                 <motion.p
-                  variants={fadeIn("down", 0.4)}
+                  variants={fadeIn("down", 0.1)}
                   initial="hidden"
                   whileInView={"show"}
                   viewport={{ once: false, amount: 0.6 }}
@@ -272,33 +313,63 @@ export default function Hero() {
                   mujassamlashtirgan haqiqiy yapon avtomobili.
                 </motion.p>
                 <motion.p
-                  variants={fadeIn("down", 0.4)}
+                  variants={fadeIn("down", 0.1)}
                   initial="hidden"
                   whileInView={"show"}
                   viewport={{ once: false, amount: 0.6 }}
                   className="description max-w-[550px] mx-auto xl:mx-0 mb-6 xl:mb-10 ml-5 text-accent"
                 >
-                  <ins>
-                    <i>$18,500 yoki oyiga $454 evaziga</i>
-                  </ins>
+                  <div className="flex items-center justify-center cursor-pointer">
+                    <div
+                      className="flip-card w-[400px] h-[60px] rounded-md mx-auto xl:pr-20"
+                      onClick={handleFlip}
+                    >
+                      <motion.div
+                        className="flip-card-inner w-[100%] h-[100%] font-semibold"
+                        initial={false}
+                        animate={{ rotateY: isFlipped ? 180 : 360 }}
+                        transition={{
+                          duration: 0.6,
+                          animationDirection: "normal",
+                        }}
+                        onAnimationComplete={() => setIsAnimating(false)}
+                      >
+                        <div className="flip-card-front w-[100%] h-[100%] bg-cover border rounded-full text-primary p-4 text-center">
+                          <h1 className="text-2xl font-bold/">
+                            {" "}
+                            244 600 000 <sub>so'm</sub>
+                          </h1>
+                        </div>
+
+                        <div className="flip-card-back  w-[100%] h-[100%] bg-cover border rounded-full text-primary p-4 text-center">
+                          <h1 className="text-2xl font-bold/">
+                            <em>
+                              <sup>oyiga</sup>{" "}
+                            </em>
+                            6 017 160 <sub>so'm</sub>
+                          </h1>
+                        </div>
+                      </motion.div>
+                    </div>
+                  </div>
                 </motion.p>
                 {/* btn google */}
                 <motion.div
-                  variants={fadeIn("down", 0.6)}
+                  variants={fadeIn("down", 0.1)}
                   initial="hidden"
                   whileInView={"show"}
                   viewport={{ once: false, amount: 0.8 }}
                   className="flex gap-x-3 justify-center xl:justify-start"
                 >
                   <div>
-                    <button className="btn btn-cta btn-accent w-[164px] mx-auto">
-                      Ariza qoldirish
+                    <button className="btn btn-cta btn-primary w-[164px] mx-auto">
+                      <p className="text-yellow">Ariza qoldirish</p>
                     </button>
                   </div>
                   {/* btn app store */}
                   <div>
-                    <button className="btn btn-cta btn-secondary w-[164px] mx-auto">
-                      Batafsil
+                    <button className="btn btn-cta btn-yellow w-[164px] mx-auto">
+                      <p className="text-primary">Batafsil</p>
                     </button>
                   </div>
                 </motion.div>
@@ -306,7 +377,7 @@ export default function Hero() {
 
               {/* image car */}
               <motion.div
-                variants={fadeIn("left", 0.6)}
+                variants={fadeIn("left", 0.1)}
                 initial="hidden"
                 whileInView={"show"}
                 viewport={{ once: false, amount: 0.6 }}
@@ -314,7 +385,7 @@ export default function Hero() {
           xl:max-w-[860px] xl:max-[]:"
               >
                 <Image
-                  src={"/images/hero/car.svg"}
+                  src={"/images/hero/Honda.png"}
                   fill
                   alt=""
                   style={{ objectFit: "contain" }}
@@ -332,7 +403,7 @@ export default function Hero() {
 
               <div className="text-center xl:max-w-xl xl:text-left mt-16 xl:mt-0">
                 <motion.h2
-                  variants={fadeIn("down", 0.2)}
+                  variants={fadeIn("down", 0.1)}
                   initial="hidden"
                   whileInView={"show"}
                   viewport={{ once: false, amount: 0.6 }}
@@ -342,7 +413,7 @@ export default function Hero() {
                   {/* <span className="text-accent">мировыми</span> предложениями */}
                 </motion.h2>
                 <motion.p
-                  variants={fadeIn("down", 0.4)}
+                  variants={fadeIn("down", 0.1)}
                   initial="hidden"
                   whileInView={"show"}
                   viewport={{ once: false, amount: 0.6 }}
@@ -352,33 +423,63 @@ export default function Hero() {
                   mujassamlashgan Elektromobil.
                 </motion.p>
                 <motion.p
-                  variants={fadeIn("down", 0.4)}
+                  variants={fadeIn("down", 0.1)}
                   initial="hidden"
                   whileInView={"show"}
                   viewport={{ once: false, amount: 0.6 }}
                   className="description max-w-[550px] mx-auto xl:mx-0 mb-6 xl:mb-10 ml-5 text-accent"
                 >
-                  <ins>
-                    <i>$20,000 yoki oyiga $492 evaziga</i>
-                  </ins>
+                  <div className="flex items-center justify-center cursor-pointer">
+                    <div
+                      className="flip-card w-[400px] h-[60px] rounded-md mx-auto xl:pr-20"
+                      onClick={handleFlip}
+                    >
+                      <motion.div
+                        className="flip-card-inner w-[100%] h-[100%] font-semibold"
+                        initial={false}
+                        animate={{ rotateY: isFlipped ? 180 : 360 }}
+                        transition={{
+                          duration: 0.6,
+                          animationDirection: "normal",
+                        }}
+                        onAnimationComplete={() => setIsAnimating(false)}
+                      >
+                        <div className="flip-card-front w-[100%] h-[100%] bg-cover border rounded-full text-primary p-4 text-center">
+                          <h1 className="text-2xl font-bold/">
+                            {" "}
+                            244 600 000 <sub>so'm</sub>
+                          </h1>
+                        </div>
+
+                        <div className="flip-card-back  w-[100%] h-[100%] bg-cover border rounded-full text-primary p-4 text-center">
+                          <h1 className="text-2xl font-bold/">
+                            <em>
+                              <sup>oyiga</sup>{" "}
+                            </em>
+                            6 017 160 <sub>so'm</sub>
+                          </h1>
+                        </div>
+                      </motion.div>
+                    </div>
+                  </div>
                 </motion.p>
                 {/* btn google */}
                 <motion.div
-                  variants={fadeIn("down", 0.6)}
+                  variants={fadeIn("down", 0.1)}
                   initial="hidden"
                   whileInView={"show"}
                   viewport={{ once: false, amount: 0.8 }}
                   className="flex gap-x-3 justify-center xl:justify-start"
                 >
                   <div>
-                    <button className="btn btn-cta btn-accent w-[164px] mx-auto">
-                      Ariza qoldirish
+                    <button className="btn btn-cta btn-primary w-[164px] mx-auto">
+                      <p className="text-yellow">Ariza qoldirish</p>
                     </button>
                   </div>
                   {/* btn app store */}
                   <div>
-                    <button className="btn btn-cta btn-secondary w-[164px] mx-auto">
-                      Batafsil
+                    <button className="btn btn-cta btn-yellow w-[164px] mx-auto">
+                      <p className="text-primary">Batafsil</p>
                     </button>
                   </div>
                 </motion.div>
@@ -386,7 +487,7 @@ export default function Hero() {
 
               {/* image car */}
               <motion.div
-                variants={fadeIn("left", 0.6)}
+                variants={fadeIn("left", 0.1)}
                 initial="hidden"
                 whileInView={"show"}
                 viewport={{ once: false, amount: 0.6 }}
@@ -394,7 +495,7 @@ export default function Hero() {
           xl:max-w-[860px] xl:max-[]:"
               >
                 <Image
-                  src={"/images/hero/car.svg"}
+                  src={"/images/hero/Honda.png"}
                   fill
                   alt=""
                   style={{ objectFit: "contain" }}
@@ -424,7 +525,7 @@ export default function Hero() {
         ) : (
           <div className="-mt-12 w-full max-w-[1300px] mx-auto">
             <motion.div
-              variants={fadeIn("up", 0.8)}
+              variants={fadeIn("up", 0.1)}
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: false, amount: 0.2 }}

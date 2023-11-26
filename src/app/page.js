@@ -17,7 +17,7 @@ export default function Home() {
     <Hero />
     <Cars />
     <About />
-    {/* <OpenCard /> */}
+    {/* <OpenCards /> */}
     <Why />
     <Testimonial />
     {/* <Cta /> */}

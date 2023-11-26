@@ -9,6 +9,8 @@ import "swiper/css";
 //next images
 import Image from "next/image";
 
+import 'swiper/css/navigation';
+
 //icons
 import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
 import { VscColorMode } from "react-icons/vsc";
@@ -36,21 +38,19 @@ export default function CarSlider() {
       viewport={{ once: false, amount: 0.2 }}
       className="container mx-auto"
     >
-      <div className="flex items-center gap-x-[10px] justify-end">
+      <div className="flex items-center gap-x-[10px] justify-end hover:text-accent">
         <h3 className="flex flex-col gap-y-4 font-semibold">
           <ul>
             <li>
-              <a href="#">See all</a>
+              <a href="../product">See all</a>
             </li>
           </ul>
         </h3>
         <AiFillCaretRight />
       </div>
-      <div className="flex items-center gap-x-[10px] justify-start">
-        <AiFillCaretLeft />
-        <AiFillCaretRight />
-      </div>
+
       <Swiper
+      
         breakpoints={{
           320: { slidesPerView: 1, spaceBetween: 15 },
           640: { slidesPerView: 2, spaceBetween: 32 },
@@ -98,9 +98,9 @@ export default function CarSlider() {
                     </h3>
                   </div>
                   {/* stars */}
-                  <div className="flex gap-x-2 text-blue-500 h-max mr-4">
+                  {/* <div className="flex gap-x-2 text-blue-500 h-max mr-4">
                     <VscColorMode />
-                  </div>
+                  </div> */}
                 </div>
                 {/* car info */}
                 <div className="flex gap-x-3 xl:gap-x-4 w-max mb-10 ml-4">
@@ -130,9 +130,25 @@ export default function CarSlider() {
                     );
                   })}
                 </div>
-                <button className="btn btn-accent btn-lg">
-                  <a href="{mazda}">Подробнее</a>
-                </button>
+                {/* <button className="btn btn-accent btn-lg">
+                  <a href="{car.src}">Подробнее</a>
+                </button> */}
+
+                {/* btn request */}
+                <div className="flex gap-x-3 justify-center xl:justify-start">
+                  <div>
+                    <button className="btn btn-cta btn-primary w-[164px] mx-auto ml-4">
+                      Ariza qoldirish
+                    </button>
+                  </div>
+                  {/* btn more */}
+                  <div>
+                    <button className="btn btn-yellow btn-yellow w-[164px] mx-auto ml-4">
+                      Batafsil
+                    </button>
+                  </div>
+                </div>
+
                 {/* <button className="btn btn-accent btn-lg">
                   <a href="{productId}">Подробнее</a>
                 </button> */}
@@ -141,6 +157,10 @@ export default function CarSlider() {
           );
         })}
       </Swiper>
+      <div className="flex items-center gap-x-[10px] justify-start p-8">
+        <AiFillCaretLeft className="hover:text-accent inline-block mb-2 rounded-full border-solid border-2 cursor-pointer" />
+        <AiFillCaretRight className="hover:text-accent inline-block mb-2 rounded-full border-solid border-2 cursor-pointer" />
+      </div>
     </motion.div>
   );
 }

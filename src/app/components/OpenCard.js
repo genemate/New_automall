@@ -3,11 +3,11 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 
-import city1 from "/public/images/test/city1.svg";
-import city2 from "/public/images/test/city2.svg";
-import city3 from "/public/images/test/city3.svg";
-import planet1 from "/public/images/test/planet1.svg";
-import planet2 from "/public/images/test/planet2.svg";
+import city1 from "/public/images/imag/city1.svg";
+import city2 from "/public/images/imag/city2.svg";
+import city3 from "/public/images/imag/city3.svg";
+import planet1 from "/public/images/imag/planet1.svg";
+import planet2 from "/public/images/imag/planet2.svg";
 
 const OpenCard = () => {
   const [expandedIndex, setExpandedIndex] = useState(null);

@@ -27,7 +27,7 @@ export default function Footer() {
       <div className="container mx-auto mb-24">
         {/* grid */}
         <motion.div
-          variants={fadeIn("up", 0.2)}
+          variants={fadeIn("up", 0.1)}
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: false, amount: 0.6 }}
