@@ -129,4 +129,68 @@ export const items = [
       },
     ],
   },
+  {
+    id: 5,
+    type: "SUV",
+    name: "L8 Max",
+    price: "35 000 000 000",
+    stars: 4.7,
+    image: "/images/carSlider/l8_car.png",
+    logo: "/icons/brands/honda.png",
+    backgroundImage: '/images/carSlider/Li_bg.png',
+    info: [
+      {
+        icon: "icons/carSlider/engine.svg",
+        text: "1600 ЛС",
+      },
+      {
+        icon: "icons/carSlider/gas.svg",
+        text: "Газ",
+      },
+      {
+        icon: "icons/carSlider/gearshift.svg",
+        text: "Автомат",
+      },
+      {
+        icon: "icons/carSlider/wheel.svg",
+        text: "Передний",
+      },
+      {
+        icon: "icons/carSlider/seat.svg",
+        text: "5 мест",
+      },
+    ],
+  },
+  {
+    id: 6,
+    type: "Sedan",
+    name: "BMW i3",
+    price: "35 000 000 000",
+    stars: 4.7,
+    image: "/images/carSlider/bmw.png",
+    logo: "/icons/brands/honda.png",
+    backgroundImage: '/images/carSlider/Honda_bg.png',
+    info: [
+      {
+        icon: "icons/carSlider/engine.svg",
+        text: "1600 ЛС",
+      },
+      {
+        icon: "icons/carSlider/gas.svg",
+        text: "Газ",
+      },
+      {
+        icon: "icons/carSlider/gearshift.svg",
+        text: "Автомат",
+      },
+      {
+        icon: "icons/carSlider/wheel.svg",
+        text: "Передний",
+      },
+      {
+        icon: "icons/carSlider/seat.svg",
+        text: "5 мест",
+      },
+    ],
+  },
 ];

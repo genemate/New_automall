@@ -94,7 +94,7 @@ export default function CarSlider() {
             <SwiperSlide key={index}>
               <div className="max-w-[385px] mx-auto sm:mx-0 cursor-pointer">
                 <motion.div className="flex justify-center items-center	">
-                  <Image src={car.logo} width={100} height={100} alt="" />
+                  {/* <Image src={car.logo} width={100} height={100} alt="" /> */}
                 </motion.div>
                 <div
                   style={{
