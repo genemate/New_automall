@@ -61,7 +61,7 @@ export default function TestimonialSlider() {
     <section className="container">
       <div className="container mx-auto">
         <h2
-          variants={fadeIn("up", 0.2)}
+          variants={fadeIn("up", 0.1)}
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: false, amount: 0.6 }}
@@ -79,7 +79,6 @@ export default function TestimonialSlider() {
           </h3>
           <AiFillCaretRight />
         </div>
-        
       </div>
       <motion.div
         variants={fadeIn("up", 0.1)}
@@ -102,7 +101,7 @@ export default function TestimonialSlider() {
           {testimonial.map((testimonial, index) => {
             return (
               <SwiperSlide key={index}>
-                <div className="max-w-[385px] mx-auto sm:mx-0">
+                <div className="max-w-[385px] mx-auto sm:mx-0 cursor-pointer">
                   <motion.div
                     whileHover={{
                       position: "relative",
@@ -123,9 +122,9 @@ export default function TestimonialSlider() {
 
                   <div className="flex justify-between">
                     <div>
-                      <div className="text-[13px] text-secondary uppercase">
+                      {/* <div className="text-[13px] text-secondary uppercase">
                         {testimonial.type}
-                      </div>
+                      </div> */}
                       <h3 className="text-lg uppercase font-bold">
                         {testimonial.title}
                       </h3>
@@ -142,7 +141,10 @@ export default function TestimonialSlider() {
                               </li>
                             </ul>
                           </h3>
-                          <AiFillCaretRight className="cursor-pointer" href="/" />
+                          <AiFillCaretRight
+                            className="cursor-pointer"
+                            href="/"
+                          />
                         </div>
                       </div>
                     </div>
@@ -151,6 +153,7 @@ export default function TestimonialSlider() {
               </SwiperSlide>
             );
           })}
+          
           {/* <div className="slider-controller">
             <div className="swiper-button-prev slider-arrow">
               <FaArrowLeft />

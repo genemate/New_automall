@@ -9,7 +9,7 @@ export default function Cars() {
     <section className="h-screen flex items-center" id="cars">
       <div className="container mx-auto">
         {/* <MultiFilters /> */}
-        <Sort />
+        {/* <Sort /> */}
         <CarSlider />
       </div>
     </section>

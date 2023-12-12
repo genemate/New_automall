@@ -13,12 +13,22 @@ import { fadeIn } from "../../../variants";
 import { MdHandshake, MdKey, MdTrendingUp } from "react-icons/md";
 import { FaHandshake } from "react-icons/fa";
 
+import backgroundImage from '/public/images/carSlider/Integrator.png'
+
 export default function Why() {
   return (
-    <section className="section flex items-center" id="why">
-      <div className="container mx-auto">
+    <section className="section flex items-center bg-yellow" id="why">
+      <div
+        style={{
+          backgroundImage: `url(${backgroundImage.src})`,
+          backgroundPosition: "right",
+          backgroundSize: "contain",
+          backgroundRepeat: "no-repeat",
+        }}
+        className="container mx-auto"
+      >
         <motion.h2
-          variants={fadeIn("up", 0.2)}
+          variants={fadeIn("up", 0.1)}
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: false, amount: 0.6 }}
@@ -27,7 +37,7 @@ export default function Why() {
           Betakror sifat va mijozlar ehtiyojini qondirish
         </motion.h2>
         <motion.p
-          variants={fadeIn("up", 0.4)}
+          variants={fadeIn("up", 0.1)}
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: false, amount: 0.6 }}
@@ -40,7 +50,7 @@ export default function Why() {
         </motion.p>
         {/* car image */}
         <motion.div
-          variants={fadeIn("up", 0.6)}
+          variants={fadeIn("up", 0.1)}
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: false, amount: 0.6 }}
@@ -50,7 +60,7 @@ export default function Why() {
         </motion.div>
         {/* grid items */}
         <motion.div
-          variants={fadeIn("up", 0.8)}
+          variants={fadeIn("up", 0.1)}
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: false, amount: 0.4 }}

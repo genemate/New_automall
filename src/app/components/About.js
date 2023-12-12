@@ -27,7 +27,7 @@ const About = () => {
         <div className="flex flex-col xl:flex-row xl:justify-between">
           {/* image */}
           <motion.div
-            variants={fadeIn("up", 0.2)}
+            variants={fadeIn("up", 0.1)}
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: false, amount: 0.6 }}
@@ -45,7 +45,7 @@ const About = () => {
           <div className="flex-l flex items-center xl:justify-center">
             <div className="xl:max-w-[517px]">
               <motion.h2
-                variants={fadeIn("up", 0.4)}
+                variants={fadeIn("up", 0.1)}
                 initial="hidden"
                 whileInView={"show"}
                 viewport={{ once: false, amount: 0.6 }}
@@ -67,7 +67,7 @@ const About = () => {
               </motion.p>
               {/* stats */}
               <motion.div
-                variants={fadeIn("up", 0.8)}
+                variants={fadeIn("up", 0.1)}
                 initial="hidden"
                 whileInView={"show"}
                 viewport={{ once: false, amount: 0.6 }}
@@ -116,7 +116,7 @@ const About = () => {
               </motion.div>
               {/* btn */}
               <motion.button
-                variants={fadeIn("up", 1)}
+                variants={fadeIn("up", 0.1)}
                 initial="hidden"
                 whileInView={"show"}
                 viewport={{ once: false, amount: 0.6 }}

@@ -8,6 +8,9 @@ import Image from "next/image";
 
 import "swiper/css/navigation";
 
+import { StreamlinedExperience } from "@/sections/streamlined-experience";
+import { styleWithCssVar } from "@/utils/motion";
+
 //icons
 import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
 import { VscColorMode } from "react-icons/vsc";
@@ -28,7 +31,7 @@ import { items } from "../items";
 
 export default function Product() {
   return (
-    <div className="container flex">
+    <div className="h-screen items-center inline-block">
       <h1>Barcha avtomobillar</h1>
 
       <motion.div
@@ -110,7 +113,7 @@ export default function Product() {
                   </button>
                 </div>
               </div>
-
+              <styleWithCssVar />
               {/* <button className="btn btn-accent btn-lg">
                   <a href="{productId}">Подробнее</a>
                 </button> */}

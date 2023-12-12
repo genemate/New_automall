@@ -5,11 +5,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 //import swiper styles
 import "swiper/css";
+import "swiper/css/navigation";
+
+import { Navigation } from "swiper/modules";
 
 //next images
 import Image from "next/image";
-
-import 'swiper/css/navigation';
 
 //icons
 import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
@@ -29,28 +30,59 @@ import { fadeIn } from "/variants";
 
 import { items } from "./items";
 
+import backgroundImage from "/public/images/carSlider/Champion_bg.png";
+
 export default function CarSlider() {
   return (
     <motion.div
-      variants={fadeIn("up", 0.4)}
+      variants={fadeIn("up", 0.1)}
       initial="hidden"
       whileInView={"show"}
       viewport={{ once: false, amount: 0.2 }}
       className="container mx-auto"
     >
-      <div className="flex items-center gap-x-[10px] justify-end hover:text-accent">
-        <h3 className="flex flex-col gap-y-4 font-semibold">
-          <ul>
-            <li>
-              <a href="../product">See all</a>
-            </li>
-          </ul>
-        </h3>
-        <AiFillCaretRight />
-      </div>
-
+      <Swiper>
+        {items.map((car, index) => {
+          <SwiperSlide key={index}>
+            <motion.div
+              variants={fadeIn("up", 0.1)}
+              initial="hidden"
+              whileInView={"show"}
+              viewport={{ once: false, amount: 0.2 }}
+              className="container mx-auto"
+            >
+              <div>
+                {items.map((car, index) => {
+                  return (
+                    <div className="inline-block max-w-[385px] mx-auto sm:mx-0 pt-20">
+                      <div className="flex justify-between">
+                        <div
+                          className="inline-block mb-2 ml-2 rounded-full border-solid 
+              border-2 hover:scale-105 transition-all ease duration-200  py-2 
+              px-10 font-semibold uppercase xl:justify-start cursor-pointer"
+                        >
+                          {car.type}
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+                <div className="flex gap-x-[10px] justify-end hover:text-accent mb-10">
+                  <h3 className="flex flex-col gap-y-4 font-semibold">
+                    <ul>
+                      <li>
+                        <a href="../product">See all</a>
+                      </li>
+                    </ul>
+                  </h3>
+                  <AiFillCaretRight />
+                </div>
+              </div>
+            </motion.div>
+          </SwiperSlide>;
+        })}
+      </Swiper>
       <Swiper
-      
         breakpoints={{
           320: { slidesPerView: 1, spaceBetween: 15 },
           640: { slidesPerView: 2, spaceBetween: 32 },
@@ -60,32 +92,34 @@ export default function CarSlider() {
         {items.map((car, index) => {
           return (
             <SwiperSlide key={index}>
-              <div className="max-w-[385px] mx-auto sm:mx-0 shadow-md cursor-pointer">
-                <motion.div
-                  // whileHover={{
-                  //   position: "relative",
-                  //   zIndex: 1,
-                  //   scale: 1.2,
-                  //   transition: {
-                  //     duration: 0.2,
-                  //   },
-                  // }}
-                  className="flex justify-center items-center"
-                >
-                  <Image src={car.logo} width={60} height={60} alt="" />
+              <div className="max-w-[385px] mx-auto sm:mx-0 cursor-pointer">
+                <motion.div className="flex justify-center items-center	">
+                  <Image src={car.logo} width={100} height={100} alt="" />
                 </motion.div>
-                <motion.div
-                  whileHover={{
-                    position: "relative",
-                    zIndex: 1,
-                    scale: 1.2,
-                    transition: {
-                      duration: 0.2,
-                    },
+                <div
+                  style={{
+                    backgroundImage: `url(${car.backgroundImage})`,
+                    backgroundPosition: "right",
+                    backgroundSize: "contain",
+                    backgroundRepeat: "no-repeat",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
                   }}
                 >
-                  <Image src={car.image} width={380} height={284} alt="" />
-                </motion.div>
+                  <motion.div
+                    whileHover={{
+                      position: "relative",
+                      zIndex: 1,
+                      scale: 1.2,
+                      transition: {
+                        duration: 0.2,
+                      },
+                    }}
+                  >
+                    <Image src={car.image} width={380} height={284} alt="" />
+                  </motion.div>
+                </div>
 
                 <div className="flex justify-between ml-5">
                   <div>
@@ -125,7 +159,7 @@ export default function CarSlider() {
                             alt=""
                           />
                         </motion.div>
-                        <div className="text-[12px] uppercase">{item.text}</div>
+                        <div className="text-[12px] uppercase drop-shadow-xl font-semibold">{item.text}</div>
                       </div>
                     );
                   })}
@@ -143,7 +177,7 @@ export default function CarSlider() {
                   </div>
                   {/* btn more */}
                   <div>
-                    <button className="btn btn-yellow btn-yellow w-[164px] mx-auto ml-4">
+                    <button className="btn btn-yellow btn-yellow w-[164px] mx-auto ml-4 font-semibold">
                       Batafsil
                     </button>
                   </div>
@@ -158,8 +192,8 @@ export default function CarSlider() {
         })}
       </Swiper>
       <div className="flex items-center gap-x-[10px] justify-start p-8">
-        <AiFillCaretLeft className="hover:text-accent inline-block mb-2 rounded-full border-solid border-2 cursor-pointer" />
-        <AiFillCaretRight className="hover:text-accent inline-block mb-2 rounded-full border-solid border-2 cursor-pointer" />
+        <AiFillCaretLeft className="cursor-pointer font-semibold hover:text-accent inline-block mb-2 rounded-full border-solid border-2 py-5 px-5" />
+        <AiFillCaretRight className="hover:text-accent inline-block mb-2 rounded-full border-solid border-2 cursor-pointer py-5 px-5" />
       </div>
     </motion.div>
   );

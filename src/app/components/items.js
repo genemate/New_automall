@@ -4,12 +4,13 @@ export const items = [
   {
     _id: 1,
     type: "Elektromobil",
-    name: "BYD Seagull",
+    name: "BYD Song Plus Champion",
     price: "221 238 900",
     stars: 3.5,
-    image: "/images/carSlider/car1.png",
-    logo: "icons/brands/mercedes.svg",
-        info: [
+    image: "/images/CarSlider/Champion_car.png",
+    logo: "/icons/brands/byd.jpg",
+    backgroundImage: '/images/carSlider/Champion_bg.png',
+    info: [
       {
         icon: "icons/carSlider/engine.svg",
         text: "38,8 kVt",
@@ -34,12 +35,13 @@ export const items = [
   },
   {
     id: 2,
-    type: "Sedan",
-    name: "Toyota Corolla",
+    type: "SUV",
+    name: "Le L9 Max",
     price: "25 000 000 000",
     stars: 5,
-    image: "/images/carSlider/car1.png",
-    logo: "icons/brands/bmw.svg",
+    image: "/images/CarSlider/Li_car.png",
+    logo: "/icons/brands/li.png",
+    backgroundImage: '/images/carSlider/Li_bg.png',
     info: [
       {
         icon: "icons/carSlider/engine.svg",
@@ -65,12 +67,13 @@ export const items = [
   },
   {
     id: 3,
-    type: "Kabriolet",
-    name: "Honda CR-V",
+    type: "Sedan",
+    name: "Chevrolet Monza",
     price: "32 000 000 000",
     stars: 4.9,
-    image: "/images/carSlider/car1.png",
-    logo: "icons/brands/vw.svg",
+    image: "/images/CarSlider/Monza_car.png",
+    logo: "/icons/brands/chevrolet.png",
+    backgroundImage: '/images/carSlider/Monza_bg.png',
     info: [
       {
         icon: "icons/carSlider/engine.svg",
@@ -96,74 +99,13 @@ export const items = [
   },
   {
     id: 4,
-    type: "Yo'ltanlamas",
-    name: "Honda CR-V",
+    type: "Sedan",
+    name: "Honda Crider",
     price: "35 000 000 000",
     stars: 4.7,
-    image: "/images/carSlider/car1.png",
-    logo: "icons/brands/mercedes.svg",
-    info: [
-      {
-        icon: "icons/carSlider/engine.svg",
-        text: "1600 ЛС",
-      },
-      {
-        icon: "icons/carSlider/gas.svg",
-        text: "Газ",
-      },
-      {
-        icon: "icons/carSlider/gearshift.svg",
-        text: "Автомат",
-      },
-      {
-        icon: "icons/carSlider/wheel.svg",
-        text: "Передний",
-      },
-      {
-        icon: "icons/carSlider/seat.svg",
-        text: "5 мест",
-      },
-    ],
-  },
-  {
-    id: 4,
-    type: "Yo'ltanlamas",
-    name: "Honda CR-V",
-    price: "35 000 000 000",
-    stars: 4.7,
-    image: "/images/carSlider/car1.png",
-    logo: "icons/brands/mercedes.svg",
-    info: [
-      {
-        icon: "icons/carSlider/engine.svg",
-        text: "1600 ЛС",
-      },
-      {
-        icon: "icons/carSlider/gas.svg",
-        text: "Газ",
-      },
-      {
-        icon: "icons/carSlider/gearshift.svg",
-        text: "Автомат",
-      },
-      {
-        icon: "icons/carSlider/wheel.svg",
-        text: "Передний",
-      },
-      {
-        icon: "icons/carSlider/seat.svg",
-        text: "5 мест",
-      },
-    ],
-  },
-  {
-    id: 4,
-    type: "Yo'ltanlamas",
-    name: "Honda CR-V",
-    price: "35 000 000 000",
-    stars: 4.7,
-    image: "/images/carSlider/car1.png",
-    logo: "icons/brands/mercedes.svg",
+    image: "/images/carSlider/Honda_car.png",
+    logo: "/icons/brands/honda.png",
+    backgroundImage: '/images/carSlider/Honda_bg.png',
     info: [
       {
         icon: "icons/carSlider/engine.svg",

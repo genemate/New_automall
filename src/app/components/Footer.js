@@ -114,7 +114,28 @@ export default function Footer() {
               </div>
             </div>
           </div>
-          {/* newsletter */}
+          {/* Map */}
+          <div className="flex-1">
+            <h3 className="h3 font-bold mb-8">Map</h3>
+            {/* <div className="flex flex-col gap-y-4">
+              <div className="flex gap-x-2">
+                <div className="text-secondary">Dam olish kunisiz:</div>
+                <div className="font-semibold">08:00 - 20:00</div>
+              </div>
+              <div className="flex gap-x-2">
+                <div className="text-secondary">Manzil:</div>
+                <div className="font-semibold">
+                  Qarshi sh, Jayxun ko‘chasi, 33
+                </div>
+              </div>
+              <div className="flex gap-x-2">
+                <div className="text-secondary"> Mo'ljal:</div>
+                <div className="font-semibold">
+                  "Nasaf" avtomobil bozori (sobiq "Osiyo" bozori)
+                </div>
+              </div>
+            </div> */}
+          </div>
         </motion.div>
       </div>
       <Copyright />

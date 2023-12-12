@@ -10,6 +10,7 @@ import Footer from "./components/Footer";
 import BackToTopBtn from "./components/BackToTopBtn";
 import OpenCard from "./components/OpenCard";
 import OpenCards from "./components/OpenCards";
+import SearchMobile from "./components/SearchMobile";
 
 export default function Home() {
   return <main className='max-w-[1920px] bg-white mx-auto relative overflow-hidden'>
@@ -22,6 +23,7 @@ export default function Home() {
     <Testimonial />
     {/* <Cta /> */}
     <Footer />
+    {/* <SearchMobile /> */}
     <BackToTopBtn />
     {/* <div className="h-[4000px]"></div> */}
   </main>;

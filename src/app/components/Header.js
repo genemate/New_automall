@@ -103,11 +103,11 @@ export default function Header() {
         >
           <Link
             className="cursor-pointer uppercase text-[13px] font-semibold text-primary hover:text-accent inline-block mb-2 rounded-full border-solid border-2 py-2 px-10"
-            to="#"
+            to="/"
             activeClass="active"
             smooth={desktopMode}
             spy={true}
-            href="/"
+            href="/product"
           >
             Avtomobillar
           </Link>

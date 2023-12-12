@@ -11,8 +11,9 @@
   "dependencies": {
     "@googlemaps/js-api-loader": "^1.16.2",
     "@headlessui/react": "^1.7.17",
+    "@nextui-org/react": "^2.2.9",
     "date-fns": "^2.30.0",
-    "framer-motion": "^10.16.4",
+    "framer-motion": "^10.16.12",
     "next": "^14.0.1",
     "react": "^18.2.0",
     "react-countup": "^6.4.2",
