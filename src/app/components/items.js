@@ -7,7 +7,7 @@ export const items = [
     name: "BYD Song Plus Champion",
     price: "221 238 900",
     stars: 3.5,
-    image: "/images/CarSlider/Champion_car.png",
+    image: "/images/carSlider/Champion_car.png",
     logo: "icons/brands/byd.svg",
     backgroundImage: "/images/carSlider/Champion_bg.png",
     info: [
@@ -39,7 +39,7 @@ export const items = [
     name: "Le L9 Max",
     price: "25 000 000 000",
     stars: 5,
-    image: "/images/CarSlider/Li_car.png",
+    image: "/images/carSlider/Li_car.png",
     logo: "icons/brands/logo_li.svg",
     backgroundImage: "/images/carSlider/Li_bg.png",
     info: [
@@ -71,7 +71,7 @@ export const items = [
     name: "Chevrolet Monza",
     price: "32 000 000 000",
     stars: 4.9,
-    image: "/images/CarSlider/Monza1.png",
+    image: "/images/carSlider/Monza1.png",
     logo: "icons/brands/chevrolet1.svg",
     backgroundImage: "/images/carSlider/Monza_bg.png",
     info: [
