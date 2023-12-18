@@ -2,102 +2,6 @@
 
 export const items = [
   {
-    id: 4,
-    type: "Sedan",
-    name: "Honda Crider",
-    price: "35 000 000 000",
-    stars: 4.7,
-    image: "/images/carSlider/Honda_car.png",
-    logo: "icons/brands/honda.svg",
-    backgroundImage: "/images/carSlider/Honda_bg.png",
-    info: [
-      {
-        icon: "icons/carSlider/engine.svg",
-        text: "1600 ЛС",
-      },
-      {
-        icon: "icons/carSlider/gas.svg",
-        text: "Газ",
-      },
-      {
-        icon: "icons/carSlider/gearshift.svg",
-        text: "Автомат",
-      },
-      {
-        icon: "icons/carSlider/wheel.svg",
-        text: "Передний",
-      },
-      {
-        icon: "icons/carSlider/seat.svg",
-        text: "5 мест",
-      },
-    ],
-  },
-  {
-    id: 5,
-    type: "SUV",
-    name: "L8 Max",
-    price: "35 000 000 000",
-    stars: 4.7,
-    image: "/images/carSlider/l8_car.png",
-    logo: "icons/brands/logo_li.svg",
-    backgroundImage: "/images/carSlider/Li_bg.png",
-    info: [
-      {
-        icon: "icons/carSlider/engine.svg",
-        text: "1600 ЛС",
-      },
-      {
-        icon: "icons/carSlider/gas.svg",
-        text: "Газ",
-      },
-      {
-        icon: "icons/carSlider/gearshift.svg",
-        text: "Автомат",
-      },
-      {
-        icon: "icons/carSlider/wheel.svg",
-        text: "Передний",
-      },
-      {
-        icon: "icons/carSlider/seat.svg",
-        text: "5 мест",
-      },
-    ],
-  },
-  {
-    id: 6,
-    type: "Sedan",
-    name: "BMW i3",
-    price: "35 000 000 000",
-    stars: 4.7,
-    image: "/images/carSlider/bmw.png",
-    logo: "icons/brands/bmw_logo.svg",
-    backgroundImage: "/images/carSlider/Mercedes_bg.png",
-    info: [
-      {
-        icon: "icons/carSlider/engine.svg",
-        text: "1600 ЛС",
-      },
-      {
-        icon: "icons/carSlider/gas.svg",
-        text: "Газ",
-      },
-      {
-        icon: "icons/carSlider/gearshift.svg",
-        text: "Автомат",
-      },
-      {
-        icon: "icons/carSlider/wheel.svg",
-        text: "Передний",
-      },
-      {
-        icon: "icons/carSlider/seat.svg",
-        text: "5 мест",
-      },
-    ],
-  },
-  {
     _id: 1,
     type: "Elektromobil",
     name: "BYD Song Plus Champion",
@@ -141,23 +45,23 @@ export const items = [
     info: [
       {
         icon: "icons/carSlider/engine.svg",
-        text: "1600 ЛС",
+        text: "1600 OK",
       },
       {
         icon: "icons/carSlider/gas.svg",
-        text: "Газ",
+        text: "Benzin",
       },
       {
         icon: "icons/carSlider/gearshift.svg",
-        text: "Автомат",
+        text: "Avtomat",
       },
       {
         icon: "icons/carSlider/wheel.svg",
-        text: "Передний",
+        text: "Old",
       },
       {
         icon: "icons/carSlider/seat.svg",
-        text: "5 мест",
+        text: "4 o'rindiq",
       },
     ],
   },
@@ -173,23 +77,119 @@ export const items = [
     info: [
       {
         icon: "icons/carSlider/engine.svg",
-        text: "1600 ЛС",
+        text: "1600 OK",
       },
       {
         icon: "icons/carSlider/gas.svg",
-        text: "Газ",
+        text: "Benzin",
       },
       {
         icon: "icons/carSlider/gearshift.svg",
-        text: "Автомат",
+        text: "Avtomat",
       },
       {
         icon: "icons/carSlider/wheel.svg",
-        text: "Передний",
+        text: "Old",
       },
       {
         icon: "icons/carSlider/seat.svg",
-        text: "5 мест",
+        text: "4 o'rindiq",
+      },
+    ],
+  },
+  {
+    id: 4,
+    type: "Sedan",
+    name: "Honda Crider",
+    price: "35 000 000 000",
+    stars: 4.7,
+    image: "/images/carSlider/Honda_car.png",
+    logo: "icons/brands/honda.svg",
+    backgroundImage: "/images/carSlider/Honda_bg.png",
+    info: [
+      {
+        icon: "icons/carSlider/engine.svg",
+        text: "1600 OK",
+      },
+      {
+        icon: "icons/carSlider/gas.svg",
+        text: "Benzin",
+      },
+      {
+        icon: "icons/carSlider/gearshift.svg",
+        text: "Avtomat",
+      },
+      {
+        icon: "icons/carSlider/wheel.svg",
+        text: "Old",
+      },
+      {
+        icon: "icons/carSlider/seat.svg",
+        text: "4 o'rindiq",
+      },
+    ],
+  },
+  {
+    id: 5,
+    type: "SUV",
+    name: "L8 Max",
+    price: "35 000 000 000",
+    stars: 4.7,
+    image: "/images/carSlider/l8_car.png",
+    logo: "icons/brands/logo_li.svg",
+    backgroundImage: "/images/carSlider/Li_bg.png",
+    info: [
+      {
+        icon: "icons/carSlider/engine.svg",
+        text: "1600 OK",
+      },
+      {
+        icon: "icons/carSlider/gas.svg",
+        text: "Benzin",
+      },
+      {
+        icon: "icons/carSlider/gearshift.svg",
+        text: "Avtomat",
+      },
+      {
+        icon: "icons/carSlider/wheel.svg",
+        text: "Old",
+      },
+      {
+        icon: "icons/carSlider/seat.svg",
+        text: "4 o'rindiq",
+      },
+    ],
+  },
+  {
+    id: 6,
+    type: "Sedan",
+    name: "BMW i3",
+    price: "35 000 000 000",
+    stars: 4.7,
+    image: "/images/carSlider/bmw.png",
+    logo: "icons/brands/bmw_logo.svg",
+    backgroundImage: "/images/carSlider/Mercedes_bg.png",
+    info: [
+      {
+        icon: "icons/carSlider/engine.svg",
+        text: "1600 OK",
+      },
+      {
+        icon: "icons/carSlider/gas.svg",
+        text: "Benzin",
+      },
+      {
+        icon: "icons/carSlider/gearshift.svg",
+        text: "Avtomat",
+      },
+      {
+        icon: "icons/carSlider/wheel.svg",
+        text: "Old",
+      },
+      {
+        icon: "icons/carSlider/seat.svg",
+        text: "4 o'rindiq",
       },
     ],
   },
