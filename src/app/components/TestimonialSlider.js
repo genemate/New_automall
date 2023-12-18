@@ -24,42 +24,12 @@ import { motion } from "framer-motion";
 import { fadeIn } from "/variants";
 
 //car data
-const testimonial = [
-  {
-    type: "Text",
-    title: "Мы открылись",
-    description:
-      "У нас в филиале Карши, открытие. Приглашаем всех наших посетителей на нашу церемонию",
-    image: "/images/news/1.jpg",
-    date: "31 Oktober, 2023",
-  },
-  {
-    type: "Video",
-    title: "Title",
-    description: "Description",
-    image: "/images/news/1.jpg",
-    date: "30 Oktober, 2023",
-  },
-  {
-    type: "Photo",
-    title: "Title",
-    description: "Description",
-    image: "/images/news/1.jpg",
-    date: "29 Oktober, 2023",
-  },
-  {
-    type: "Audio",
-    title: "Title",
-    description: "Description",
-    image: "/images/news/1.jpg",
-    date: "28 Oktober, 2023",
-  },
-];
+import { news } from "./news";
 
 export default function TestimonialSlider() {
   return (
     <section className="container">
-      <div className="container mx-auto">
+      <div className="container mx-auto ">
         <h2
           variants={fadeIn("up", 0.1)}
           initial="hidden"
@@ -67,7 +37,7 @@ export default function TestimonialSlider() {
           viewport={{ once: false, amount: 0.6 }}
           className="h2 text-left"
         >
-          News
+          Yangiliklar
         </h2>
         <div className="flex items-center gap-x-[10px] justify-end">
           <h3 className="flex flex-col gap-y-4 font-semibold">
@@ -77,7 +47,7 @@ export default function TestimonialSlider() {
               </li>
             </ul>
           </h3>
-          <AiFillCaretRight />
+          <AiFillCaretRight className="cursor-pointer" />
         </div>
       </div>
       <motion.div
@@ -98,7 +68,7 @@ export default function TestimonialSlider() {
             1260: { slidesPerView: 3, spaceBetween: 32 },
           }}
         >
-          {testimonial.map((testimonial, index) => {
+          {news.map((news, index) => {
             return (
               <SwiperSlide key={index}>
                 <div className="max-w-[385px] mx-auto sm:mx-0 cursor-pointer">
@@ -113,7 +83,7 @@ export default function TestimonialSlider() {
                     }}
                   >
                     <Image
-                      src={testimonial.image}
+                      src={news.image}
                       width={380}
                       height={284}
                       alt=""
@@ -125,19 +95,19 @@ export default function TestimonialSlider() {
                       {/* <div className="text-[13px] text-secondary uppercase">
                         {testimonial.type}
                       </div> */}
-                      <h3 className="text-lg uppercase font-bold">
-                        {testimonial.title}
+                      <h3 className="text-lg uppercase font-bold py-6">
+                        {news.title}
                       </h3>
                       {/* <p className="mb-10 font-normal uppercase">
                         {testimonial.description}
                       </p> */}
-                      <div className="text-[13px] text-secondary uppercase py-6 flex items-center gap-x-[190px] ">
-                        {testimonial.date}
+                      <div className="text-[13px] text-secondary uppercase py-6 flex items-center gap-x-[160px] ">
+                        {news.date}
                         <div className="flex items-center gap-x-[10px]">
                           <h3 className="flex flex-col gap-y-4 font-semibold">
                             <ul>
                               <li>
-                                <a href="#">more</a>
+                                <a href="#">Batafsil</a>
                               </li>
                             </ul>
                           </h3>

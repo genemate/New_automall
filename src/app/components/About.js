@@ -51,7 +51,7 @@ const About = () => {
                 viewport={{ once: false, amount: 0.6 }}
                 className="h2"
               >
-                Покупка автомобиля упрощена
+                Avtomobil sotib olish yanada osonlashdi
               </motion.h2>
               <motion.p
                 variants={fadeIn("up", 0.6)}
@@ -60,10 +60,10 @@ const About = () => {
                 viewport={{ once: false, amount: 0.6 }}
                 className="mb-[42px] max-w-md"
               >
-                Отсортируйте, выбирайте и приобретайте с легкостью. Наше удобное
-                расположение и разнообразные типы автомобилей гарантируют
-                надежное качества и безмерное удовольствие от приобретенного
-                продукта.
+                Osonlik bilan saralang, tanlang va sotib oling. Bizning qulay
+                joylashuvimiz va avtomobil turlarining xilma-xilligi ishonchli
+                sifat va sotib olingan mahsulotdan katta qoniqishni
+                kafolatlaydi.
               </motion.p>
               {/* stats */}
               <motion.div
@@ -83,7 +83,7 @@ const About = () => {
                     +
                   </div>
                   <div className="uppercase text-[13px] font-semibold text-secondary">
-                    типов <br /> автомобилей
+                    avtomobil <br /> turlari
                   </div>
                 </div>
                 {/* rental outlets */}
@@ -96,7 +96,7 @@ const About = () => {
                     +
                   </div>
                   <div className="uppercase text-[13px] font-semibold text-secondary">
-                    довольных <br /> клиентов
+                    xursand <br /> mijozlar
                   </div>
                 </div>
                 {/* repair points */}
@@ -110,7 +110,7 @@ const About = () => {
                     +
                   </div>
                   <div className="uppercase text-[13px] font-semibold text-secondary">
-                    проданных <br /> автомобилей
+                    sotilgan <br /> avtomobillar
                   </div>
                 </div>
               </motion.div>
@@ -122,7 +122,7 @@ const About = () => {
                 viewport={{ once: false, amount: 0.6 }}
                 className="hidden xl:block bg-accent hover:bg-accent-hover rounded-[10px] w-full h-16 uppercase font-medium text-white tracking-[2px] text-[13px] max-w-[184px]"
               >
-                Все машины
+                Barcha avtomobillar
                 {/* Станьте одним из счастливых клиентов AUTOMALL */}
               </motion.button>
             </div>

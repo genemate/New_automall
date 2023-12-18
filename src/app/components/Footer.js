@@ -44,7 +44,7 @@ export default function Footer() {
               <Image src={"/icons/logo.png"} width={150} height={100} alt="" />
             </Link>
             {/* text */}
-            <div className="flex h-full items-center">
+            <div className="py-1 justify-stretch grid grid-flow-col">
               <a href="/">
                 <FaTelegramPlane />
               </a>

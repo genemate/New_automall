@@ -16,6 +16,7 @@ import { useMediaQuery } from "react-responsive";
 //icons
 import { BiMenuAltRight, BiX } from "react-icons/bi";
 import { FaInstagram, FaTelegramPlane, FaFacebook } from "react-icons/fa";
+import { MdManageSearch } from "react-icons/md";
 
 //search context
 import { SearchContext } from "../context/search";
@@ -102,7 +103,7 @@ export default function Header() {
           text-sm xl:text-[15px] xl:normal-case xl:items-center`}
         >
           <Link
-            className="cursor-pointer uppercase text-[13px] font-semibold text-primary hover:text-accent inline-block mb-2 rounded-full border-solid border-2 py-2 px-10"
+            className="cursor-pointer uppercase text-[13px] font-semibold text-primary hover:text-accent inline-block px-5 duration-300"
             to="/"
             activeClass="active"
             smooth={desktopMode}
@@ -112,7 +113,7 @@ export default function Header() {
             Avtomobillar
           </Link>
           <Link
-            className="cursor-pointer uppercase text-[13px] font-semibold text-primary hover:text-accent inline-block mb-2 rounded-full border-solid border-2 py-2 px-10"
+            className="cursor-pointer uppercase text-[13px] font-semibold text-primary hover:text-accent inline-block px-5 duration-300"
             to="#"
             activeClass="active"
             smooth={desktopMode}
@@ -121,7 +122,7 @@ export default function Header() {
             Maxsus takliflar
           </Link>
           <Link
-            className="cursor-pointer uppercase text-[13px] font-semibold text-primary hover:text-accent inline-block mb-2 rounded-full border-solid border-2 py-2 px-10"
+            className="cursor-pointer uppercase text-[13px] font-semibold text-primary hover:text-accent inline-block px-5 duration-300"
             to="#"
             activeClass="active"
             smooth={desktopMode}
@@ -131,7 +132,7 @@ export default function Header() {
             Muddatli to'lov
           </Link>
           <Link
-            className="cursor-pointer uppercase text-[13px] font-semibold text-primary hover:text-accent inline-block mb-2 rounded-full border-solid border-2 py-2 px-10"
+            className="cursor-pointer uppercase text-[13px] font-semibold text-primary hover:text-accent inline-block px-5 duration-300"
             to="#"
             activeClass="active"
             smooth={desktopMode}
@@ -159,18 +160,21 @@ export default function Header() {
             See all cars
           </Link>
           <SearchMobile /> */}
-          {/* <div className="flex h-full justify-between border-dark items-center mb-2 rounded-full border-solid border-2">
-            <a href="/">
+          {/* <div className="flex justify-between items-center px-5 duration-300">
+            <a href="/" className="px-1">
               <FaTelegramPlane />
             </a>
-            <a href="/">
+            <a href="/" className="px-1">
               <FaInstagram />
             </a>
-            <a href="/">
+            <a href="/" className="px-1">
               <FaFacebook />
             </a>
           </div> */}
         </nav>
+        <div className="flex gap-8 items-center cursor-pointer">
+          <MdManageSearch className="text-xl " />
+        </div>
       </div>
     </header>
   );

@@ -31,7 +31,8 @@ import { items } from "../items";
 
 export default function Product() {
   return (
-    <div className="h-screen items-center inline-block">
+    <div className="h-screen items-center inline-table">
+     
       <h1>Barcha avtomobillar</h1>
 
       <motion.div

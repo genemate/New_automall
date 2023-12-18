@@ -17,11 +17,13 @@ import { motion, easeInOut } from "framer-motion";
 //variants
 import { fadeIn } from "/variants";
 
+
 //Swiper
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Autoplay, Pagination } from "swiper/modules";
+import { items } from "./items";
 
 export default function Hero() {
   const { searchActive } = useContext(SearchContext);
@@ -44,7 +46,7 @@ export default function Hero() {
   return (
     <section className="h-screen xl:h-[90vh] bg-[#b2b7c2]/10" id="home">
       <Swiper
-        direction={"horizontal"}
+        direction={"vertical"}
         loop={true}
         spaceBetween={30}
         centeredSlides={true}
@@ -53,7 +55,7 @@ export default function Hero() {
           disableOnInteraction: false,
         }}
         pagination={{
-          clickable: "true",
+          clickable: "false",
         }}
         modules={[Autoplay, Pagination]}
         className="mySwiper"

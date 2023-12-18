@@ -30,7 +30,6 @@ import { fadeIn } from "/variants";
 
 import { items } from "./items";
 
-import backgroundImage from "/public/images/carSlider/Champion_bg.png";
 
 export default function CarSlider() {
   return (
@@ -41,7 +40,22 @@ export default function CarSlider() {
       viewport={{ once: false, amount: 0.2 }}
       className="container mx-auto"
     >
-      <Swiper>
+      <h1
+        variants={fadeIn("up", 0.1)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: false, amount: 0.1 }}
+        className="h2 text-left pt-20"
+      >
+        Avtomobillar
+      </h1>
+      <div className="py-2 justify-stretch grid grid-flow-col">
+        <p className="inline-block cursor-pointer">Barcha Avtomobillar</p>
+        <p className="inline-block cursor-pointer">ELEKTROMOBIL</p>
+        <p className="inline-block cursor-pointer">SUV</p>
+        <p className="inline-block cursor-pointer">SEDAN</p>
+      </div>
+      <Swiper className="border-solid border-2 py-2 px-10 rounded-full inline-block mb-2">
         {items.map((car, index) => {
           <SwiperSlide key={index}>
             <motion.div
@@ -94,7 +108,7 @@ export default function CarSlider() {
             <SwiperSlide key={index}>
               <div className="max-w-[385px] mx-auto sm:mx-0 cursor-pointer">
                 <motion.div className="flex justify-center items-center	">
-                  {/* <Image src={car.logo} width={100} height={100} alt="" /> */}
+                  <Image src={car.logo} width={80} height={80} alt="" />
                 </motion.div>
                 <div
                   style={{
@@ -159,7 +173,9 @@ export default function CarSlider() {
                             alt=""
                           />
                         </motion.div>
-                        <div className="text-[12px] uppercase drop-shadow-xl font-semibold">{item.text}</div>
+                        <div className="text-[12px] uppercase drop-shadow-xl font-semibold">
+                          {item.text}
+                        </div>
                       </div>
                     );
                   })}
