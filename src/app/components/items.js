@@ -71,7 +71,7 @@ export const items = [
     name: "Chevrolet Monza",
     price: "32 000 000 000",
     stars: 4.9,
-    image: "/images/CarSlider/Monza_car.png",
+    image: "/images/CarSlider/Monza1.png",
     logo: "icons/brands/chevrolet1.svg",
     backgroundImage: "/images/carSlider/Monza_bg.png",
     info: [
