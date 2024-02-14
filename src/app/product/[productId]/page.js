@@ -6,4 +6,5 @@ export async function generateStaticParams() {
     return <div>Product detail {params.productId}</div>;
   }
   
+
   export default Post;

@@ -43,7 +43,7 @@ export default function TestimonialSlider() {
           <h3 className="flex flex-col gap-y-4 font-semibold">
             <ul>
               <li>
-                <a href="#">See all</a>
+                <a href="/news">See all</a>
               </li>
             </ul>
           </h3>

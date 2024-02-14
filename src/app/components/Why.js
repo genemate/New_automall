@@ -17,7 +17,7 @@ import backgroundImage from '/public/images/carSlider/Integrator.png'
 
 export default function Why() {
   return (
-    <section className="section flex items-center bg-yellow" id="why">
+    <section className="section flex items-center bg-[#b2b7c2]/10" id="why">
       <div
         style={{
           backgroundImage: `url(${backgroundImage.src})`,

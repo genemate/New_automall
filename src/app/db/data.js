@@ -45,12 +45,16 @@ const data = [
   {
     id: 2,
     category: "SUV",
+    title: "Hashamatli, Progressiv va keng Krossover!",
     name: "Le L9 Max",
-    price: "25 000 000 000",
+    priceOld: "25 000 000 000",
+    priceNew: "25 000 000 000",
+    priceMonths: "6 017 160",
     stars: <AiFillStar className="rating-star"/>,
     image: "/images/CarSlider/Li_car.png",
     logo: "icons/brands/logo_li.svg",
     backgroundImage: "/images/carSlider/Li_bg.png",
+    headerImage: "/images/hero/Monza.png",
     info: [
       {
         icon: "icons/carSlider/engine.svg",

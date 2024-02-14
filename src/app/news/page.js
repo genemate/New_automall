@@ -2,7 +2,7 @@
 
 import Header from "../components/Header";
 import Products from "../Products/Product";
-// import data from "../db/data";
+import data from "../db/data";
 import Footer from "../components/Footer";
 import BackToTopBtn from "../components/BackToTopBtn";
 import CarSlider from "../components/CarSlider";
@@ -11,6 +11,7 @@ import Recommended from "../Recommended/Recommended";
 import Sidebar from "../Sidebar/Sidebar";
 import Card from "../components/Card";
 import { useState } from "react";
+import Product from "../components/Pages/Product";
 
 function PostPage() {
   const [selectedCategory, setSelectedCategory] = useState(null);
@@ -79,7 +80,8 @@ function PostPage() {
       <Sidebar handleChange={handleChange} />
       {/* <Recommended handleClick={handleClick} /> */}
       <Products result={result} />
-      <CarSlider />
+      {/* <CarSlider /> */}
+      <Product />
       {/* <Card /> */}
       {/* <Slides /> */}
       <Footer />

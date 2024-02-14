@@ -8,9 +8,6 @@ import Image from "next/image";
 
 import "swiper/css/navigation";
 
-import { StreamlinedExperience } from "@/sections/streamlined-experience";
-import { styleWithCssVar } from "@/utils/motion";
-
 //icons
 import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
 import { VscColorMode } from "react-icons/vsc";
@@ -31,7 +28,7 @@ import { items } from "../items";
 
 export default function Product() {
   return (
-    <div className="h-screen items-center inline-table">
+    <div className="max-w-2xl m-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
      
       <h1>Barcha avtomobillar</h1>
 
@@ -40,7 +37,7 @@ export default function Product() {
         initial="hidden"
         whileInView={"show"}
         viewport={{ once: false, amount: 0.2 }}
-        className="flex container mx-auto pb-10 pt-10 flex-initial"
+        className="max-w-2xl m-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8"
       >
         {items.map((car) => {
           return (

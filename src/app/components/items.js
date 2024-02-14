@@ -2,7 +2,7 @@
 
 export const items = [
   {
-    _id: 1,
+    productId: 1,
     type: "Elektromobil",
     name: "BYD Song Plus Champion",
     price: "221 238 900",
@@ -34,7 +34,7 @@ export const items = [
     ],
   },
   {
-    id: 2,
+    productId: 2,
     type: "SUV",
     name: "Le L9 Max",
     price: "25 000 000 000",
@@ -66,7 +66,7 @@ export const items = [
     ],
   },
   {
-    id: 3,
+    productId: 3,
     type: "Sedan",
     name: "Chevrolet Monza",
     price: "32 000 000 000",

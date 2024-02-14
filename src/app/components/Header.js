@@ -102,7 +102,7 @@ export default function Header() {
           xl:pb-0 transition-all duration-150 text-center xl:text-center uppercase 
           text-sm xl:text-[15px] xl:normal-case xl:items-center`}
         >
-          <Link
+          <a
             className="cursor-pointer uppercase text-[13px] font-semibold text-primary hover:text-accent inline-block px-5 duration-300"
             to="/"
             activeClass="active"
@@ -111,8 +111,8 @@ export default function Header() {
             href="/product"
           >
             Avtomobillar
-          </Link>
-          <Link
+          </a>
+          <a
             className="cursor-pointer uppercase text-[13px] font-semibold text-primary hover:text-accent inline-block px-5 duration-300"
             to="#"
             activeClass="active"
@@ -120,8 +120,8 @@ export default function Header() {
             spy={true}
           >
             Maxsus takliflar
-          </Link>
-          <Link
+          </a>
+          <a
             className="cursor-pointer uppercase text-[13px] font-semibold text-primary hover:text-accent inline-block px-5 duration-300"
             to="#"
             activeClass="active"
@@ -130,8 +130,8 @@ export default function Header() {
             href="/"
           >
             Muddatli to'lov
-          </Link>
-          <Link
+          </a>
+          <a
             className="cursor-pointer uppercase text-[13px] font-semibold text-primary hover:text-accent inline-block px-5 duration-300"
             to="#"
             activeClass="active"
@@ -140,7 +140,7 @@ export default function Header() {
             href="/"
           >
             Biz haqimizda
-          </Link>
+          </a>
           {/* <Link
             className="cursor-pointer"
             to="testimonial"
