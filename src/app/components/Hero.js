@@ -624,7 +624,7 @@ export default function Hero() {
           <span ref={progressContent}></span>
         </div>
       </Swiper>
-      <div>
+      {/* <div>
         {searchActive ? (
           <motion.div
             initial={{ y: "-100%" }}
@@ -647,7 +647,7 @@ export default function Hero() {
             </motion.div>
           </div>
         )}
-      </div>
+      </div> */}
     </section>
   );
 }

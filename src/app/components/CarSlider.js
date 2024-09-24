@@ -49,12 +49,12 @@ export default function CarSlider() {
       >
         Avtomobillar
       </h1>
-      <div className="py-2 justify-stretch grid grid-flow-col">
+      {/* <div className="py-2 justify-stretch grid grid-flow-col">
         <p className="inline-block cursor-pointer">Barcha Avtomobillar</p>
         <p className="inline-block cursor-pointer">ELEKTROMOBIL</p>
         <p className="inline-block cursor-pointer">SUV</p>
         <p className="inline-block cursor-pointer">SEDAN</p>
-      </div>
+      </div> */}
       <Swiper className="border-solid border-2 py-2 px-10 rounded-full inline-block mb-2">
         {items.map((car, index) => {
           <SwiperSlide key={index}>
@@ -107,9 +107,9 @@ export default function CarSlider() {
           return (
             <SwiperSlide key={index}>
               <div className="max-w-[385px] mx-auto sm:mx-0 cursor-pointer">
-                <motion.div className="flex justify-center items-center	">
+                {/* <motion.div className="flex justify-center items-center	">
                   <Image src={car.logo} width={80} height={80} alt="" />
-                </motion.div>
+                </motion.div> */}
                 <div
                   style={{
                     backgroundImage: `url(${car.backgroundImage})`,
